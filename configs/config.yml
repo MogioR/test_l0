@@ -1,0 +1,5 @@
+psql_host: localhost
+psql_pass: poiiop007
+psql_user: postgres
+psql_port: 5432
+psql_name: postgres
