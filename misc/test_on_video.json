@@ -1,0 +1,75 @@
+{
+    "order_uid": "test_on_video",
+    "track_number": "asdasd",
+    "entry": "sadasd",
+    "delivery": {
+      "name": "Mosds Fdsfsdf",
+      "phone": "+5321321321",
+      "zip": "2232",
+      "city": "Kiryat Mozkin",
+      "address": "Ploshad Mira 15",
+      "region": "Kraiot",
+      "email": "test@gmail.com"
+    },
+    "payment": {
+      "transaction": "asdsfasfasa",
+      "request_id": "",
+      "currency": "USD",
+      "provider": "wbpay",
+      "amount": 233,
+      "payment_dt": 23213,
+      "bank": "vtb",
+      "delivery_cost": 2333,
+      "goods_total": 2321,
+      "custom_fee": 23
+    },
+    "items": [
+      {
+        "chrt_id": 12323,
+        "track_number": "ddddfsdsf",
+        "price": 453,
+        "rid": "dsffsdfdfsdf",
+        "name": "Mascaras",
+        "sale": 40,
+        "size": "0",
+        "total_price": 123,
+        "nm_id": 231,
+        "brand": "Japanice",
+        "status": 123
+      },
+      {
+        "chrt_id": 34234,
+        "track_number": "dsfsdfsfds",
+        "price": 23,
+        "rid": "dsffsdfdfsdf",
+        "name": "Mascaras",
+        "sale": 32,
+        "size": "0",
+        "total_price": 13,
+        "nm_id": 231,
+        "brand": "Japanice",
+        "status": 32
+      },
+      {
+        "chrt_id": 222,
+        "track_number": "sadfdsfsdf",
+        "price": 2223,
+        "rid": "dsffsdfdfsdf",
+        "name": "Mascaras",
+        "sale": 22,
+        "size": "0",
+        "total_price": 32,
+        "nm_id": 22,
+        "brand": "Кгыышфт",
+        "status": 32
+      }
+    ],
+    "locale": "jp",
+    "internal_signature": "",
+    "customer_id": "ss",
+    "delivery_service": "dd",
+    "shardkey": "9",
+    "sm_id": 99,
+    "date_created": "2023-10-26T06:22:19Z",
+    "oof_shard": "1"
+  }

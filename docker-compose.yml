@@ -1,0 +1,43 @@
+services:
+  postgres:
+    image: library/postgres:13
+    container_name: postgres
+    restart: on-failure
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: "postgres"
+      POSTGRES_DB: postgres
+    volumes:
+      - db-data:/var/lib/postgresql/data
+      - ./postgres/:/docker-entrypoint-initdb.d/
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U postgres" ]
+      interval: 15s
+      timeout: 15s
+      retries: 10
+
+  nats-streaming:
+    container_name: nats-streaming
+    image: nats-streaming:0.24.6
+    command:
+      - "--store"
+      - "file"
+      - "--dir"
+      - "data"
+    ports:
+      - "4222:4222"
+      - "8222:8222"
+
+  order-service:
+    container_name: orderservice
+    build: .
+    depends_on:
+      postgres:
+        condition: service_healthy
+    ports:
+      - "8080:8080"
+
+volumes:
+  db-data:

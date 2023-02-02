@@ -1,4 +1,4 @@
-package core
+package domain
 
 type Delivery struct {
 	Name    string `json:"name"`

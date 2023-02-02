@@ -1,9 +1,8 @@
-package psql
+package psqlbd
 
 import (
 	"fmt"
-	"strconv"
-	config "test-module/internal/configs"
+	config "test-module/internal/config"
 
 	_ "github.com/jackc/pgx/v5/stdlib"
 	"github.com/jmoiron/sqlx"
@@ -17,12 +16,12 @@ func Connect(config config.Config) (*DB, error) {
 	db, err := sqlx.Open(
 		"pgx",
 		fmt.Sprintf(
-			"user=%s dbname=%s password=%s host=%s port=%s",
+			"user=%s dbname=%s password=%s host=%s port=%d",
 			config.PSQLUser,
 			config.PSQLName,
 			config.PSQLPass,
 			config.PSQLHost,
-			strconv.Itoa(int(config.PSQLPort)),
+			config.PSQLPort,
 		),
 	)
 	if err != nil {

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/style.css">
+    <title>Test Api</title>
+</head>
+<body style="background-color: aquamarine;">
+    <div>
+        <form action="" method="get">
+            <label for="uid">Поиск заказа по UID</label>
+            <br>
+            <input type="text" name="orderUid" id="uid">
+            <br>
+            <input type="submit" value="Найти">
+            <br>
+            <textarea readonly>{{ . }}</textarea>
+        </form>
+    </div>
+</body>
+</html>

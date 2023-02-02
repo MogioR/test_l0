@@ -1,5 +1,9 @@
-psql_host: localhost
-psql_pass: poiiop007
+psql_host: postgres
+psql_pass: postgres
 psql_user: postgres
 psql_port: 5432
 psql_name: postgres
+nuts_cluster: test-cluster
+nuts_client: order-subscriber
+nuts_chanel: order-notification
+nuts_host: nats-streaming
